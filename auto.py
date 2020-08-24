@@ -56,7 +56,6 @@ class MyHandler(FileSystemEventHandler):
                 elif sunday["sub2_start"] < now < sunday["sub2_end"]:
                     sub = sunday["sub2"]
                     teacher = sunday["sub2_teacher"]
-                    return sub, teacher
                 elif sunday["sub3_start"] < now < sunday["sub3_end"]:
                     sub = sunday["sub3"]
                     teacher = sunday["sub3_teacher"]
@@ -66,7 +65,6 @@ class MyHandler(FileSystemEventHandler):
                 elif sunday["sub5_start"] < now < sunday["sub5_end"]:
                     sub = sunday["sub5"]
                     teacher = sunday["sub5_teacher"]
-                    return sub, teacher
             elif today == "Monday":
                 if monday["sub1_start"] < now < monday["sub1_end"]:
                     sub = monday["sub1"]
@@ -74,7 +72,6 @@ class MyHandler(FileSystemEventHandler):
                 elif monday["sub2_start"] < now < monday["sub2_end"]:
                     sub = monday["sub2"]
                     teacher = monday["sub2_teacher"]
-                    return sub, teacher
                 elif monday["sub3_start"] < now < monday["sub3_end"]:
                     sub = monday["sub3"]
                     teacher = monday["sub3_teacher"]
@@ -85,7 +82,6 @@ class MyHandler(FileSystemEventHandler):
                 elif tuesday["sub2_start"] < now < tuesday["sub2_end"]:
                     sub = tuesday["sub2"]
                     teacher = tuesday["sub2_teacher"]
-                    return sub, teacher
                 elif tuesday["sub3_start"] < now < tuesday["sub3_end"]:
                     sub = tuesday["sub3"]
                     teacher = tuesday["sub3_teacher"]
@@ -105,7 +101,6 @@ class MyHandler(FileSystemEventHandler):
                 elif wednesday["sub2_start"] < now < wednesday["sub2_end"]:
                     sub = wednesday["sub2"]
                     teacher = wednesday["sub2_teacher"]
-                    return sub, teacher
                 elif wednesday["sub3_start"] < now < wednesday["sub3_end"]:
                     sub = wednesday["sub3"]
                     teacher = wednesday["sub3_teacher"]
@@ -119,7 +114,6 @@ class MyHandler(FileSystemEventHandler):
                 elif thursday["sub2_start"] < now < thursday["sub2_end"]:
                     sub = thursday["sub2"]
                     teacher = thursday["sub2_teacher"]
-                    return sub, teacher
                 elif thursday["sub3_start"] < now < thursday["sub3_end"]:
                     sub = thursday["sub3"]
                     teacher = thursday["sub3_teacher"]
@@ -133,7 +127,6 @@ class MyHandler(FileSystemEventHandler):
                 elif friday["sub2_start"] < now < friday["sub2_end"]:
                     sub = friday["sub2"]
                     teacher = friday["sub2_teacher"]
-                    return sub, teacher
                 elif friday["sub3_start"] < now < friday["sub3_end"]:
                     sub = friday["sub3"]
                     teacher = friday["sub3_teacher"]
@@ -150,7 +143,7 @@ class MyHandler(FileSystemEventHandler):
             else:
                 print(folder_destination + " /" +
                       sub + "/" + teacher + "/" + date)
-            new_destination = folder_destination + "/" + sub + \
+            new_destination = folder_destination + "/" + sub +\
                 "/" + teacher + "/" + date + "/" + filename
             os.rename(src, new_destination)
 
