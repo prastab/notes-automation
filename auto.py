@@ -80,8 +80,8 @@ class MyHandler(FileSystemEventHandler):
                     teacher = monday["sub3_teacher"]
             elif today == "Tuesday":
                 if tuesday["sub1_start"] < now < tuesday["sub1_end"]:
-                    sub = sunday["sub1"]
-                    teacher = sunday["sub1_teacher"]
+                    sub = tuesday["sub1"]
+                    teacher = tuesday["sub1_teacher"]
                 elif tuesday["sub2_start"] < now < tuesday["sub2_end"]:
                     sub = tuesday["sub2"]
                     teacher = tuesday["sub2_teacher"]
@@ -99,47 +99,47 @@ class MyHandler(FileSystemEventHandler):
                     sub = tuesday["sub6"]
                     teacher = tuesday["sub6_teacher"]
             elif today == "Wednesday":
-                if sunday["sub1_start"] < now < sunday["sub1_end"]:
-                    sub = sunday["sub1"]
-                    teacher = sunday["sub1_teacher"]
-                elif sunday["sub2_start"] < now < sunday["sub2_end"]:
-                    sub = sunday["sub2"]
-                    teacher = sunday["sub2_teacher"]
+                if wednesday["sub1_start"] < now < wednesday["sub1_end"]:
+                    sub = wednesday["sub1"]
+                    teacher = wednesday["sub1_teacher"]
+                elif wednesday["sub2_start"] < now < wednesday["sub2_end"]:
+                    sub = wednesday["sub2"]
+                    teacher = wednesday["sub2_teacher"]
                     return sub, teacher
-                elif sunday["sub3_start"] < now < sunday["sub3_end"]:
-                    sub = sunday["sub3"]
-                    teacher = sunday["sub3_teacher"]
-                elif sunday["sub4_start"] < now < sunday["sub4_end"]:
-                    sub = sunday["sub4"]
-                    teacher = sunday["sub4_teacher"]
+                elif wednesday["sub3_start"] < now < wednesday["sub3_end"]:
+                    sub = wednesday["sub3"]
+                    teacher = wednesday["sub3_teacher"]
+                elif wednesday["sub4_start"] < now < wednesday["sub4_end"]:
+                    sub = wednesday["sub4"]
+                    teacher = wednesday["sub4_teacher"]
             elif today == "Thursday":
-                if sunday["sub1_start"] < now < sunday["sub1_end"]:
-                    sub = sunday["sub1"]
-                    teacher = sunday["sub1_teacher"]
-                elif sunday["sub2_start"] < now < sunday["sub2_end"]:
-                    sub = sunday["sub2"]
-                    teacher = sunday["sub2_teacher"]
+                if thursday["sub1_start"] < now < thursday["sub1_end"]:
+                    sub = thursday["sub1"]
+                    teacher = thursday["sub1_teacher"]
+                elif thursday["sub2_start"] < now < thursday["sub2_end"]:
+                    sub = thursday["sub2"]
+                    teacher = thursday["sub2_teacher"]
                     return sub, teacher
-                elif sunday["sub3_start"] < now < sunday["sub3_end"]:
-                    sub = sunday["sub3"]
-                    teacher = sunday["sub3_teacher"]
-                elif sunday["sub4_start"] < now < sunday["sub4_end"]:
-                    sub = sunday["sub4"]
-                    teacher = sunday["sub4_teacher"]
+                elif thursday["sub3_start"] < now < thursday["sub3_end"]:
+                    sub = thursday["sub3"]
+                    teacher = thursday["sub3_teacher"]
+                elif thursday["sub4_start"] < now < thursday["sub4_end"]:
+                    sub = thursday["sub4"]
+                    teacher = thursday["sub4_teacher"]
             elif today == "Friday":
-                if sunday["sub1_start"] < now < sunday["sub1_end"]:
-                    sub = sunday["sub1"]
-                    teacher = sunday["sub1_teacher"]
-                elif sunday["sub2_start"] < now < sunday["sub2_end"]:
-                    sub = sunday["sub2"]
-                    teacher = sunday["sub2_teacher"]
+                if friday["sub1_start"] < now < friday["sub1_end"]:
+                    sub = friday["sub1"]
+                    teacher = friday["sub1_teacher"]
+                elif friday["sub2_start"] < now < friday["sub2_end"]:
+                    sub = friday["sub2"]
+                    teacher = friday["sub2_teacher"]
                     return sub, teacher
-                elif sunday["sub3_start"] < now < sunday["sub3_end"]:
-                    sub = sunday["sub3"]
-                    teacher = sunday["sub3_teacher"]
-                elif sunday["sub4_start"] < now < sunday["sub4_end"]:
-                    sub = sunday["sub4"]
-                    teacher = sunday["sub4_teacher"]
+                elif friday["sub3_start"] < now < friday["sub3_end"]:
+                    sub = friday["sub3"]
+                    teacher = friday["sub3_teacher"]
+                elif friday["sub4_start"] < now < friday["sub4_end"]:
+                    sub = friday["sub4"]
+                    teacher = friday["sub4_teacher"]
             else:
                 sub = "Screenshots"
                 return sub, teacher
