@@ -18,7 +18,7 @@ monday = {
     "sub1": "English", "sub1_teacher": "", "sub1_start": now.replace(hour=8, minute=0), "sub1_end": now.replace(hour=8, minute=45),
     "sub2": "Further", "sub2_teacher": "", "sub2_start": now.replace(hour=9, minute=0), "sub2_end": now.replace(hour=9, minute=45),
     "sub3": "Chem", "sub3_teacher": "ShT", "sub3_start": now.replace(hour=11, minute=15), "sub3_end": now.replace(hour=12, minute=0)}
-tuesay = {
+tuesday = {
     "sub1": "Physics", "sub1_teacher": "DPK-Not sure", "sub1_start": now.replace(hour=8, minute=0), "sub1_end": now.replace(hour=8, minute=45),
     "sub2": "Chem", "sub2_teacher": "RT", "sub2_start": now.replace(hour=9, minute=0), "sub2_end": now.replace(hour=9, minute=45),
     "sub3": "Chem", "sub3_teacher": "UVK", "sub3_start": now.replace(hour=10, minute=15), "sub3_end": now.replace(hour=11, minute=0),
@@ -68,38 +68,38 @@ class MyHandler(FileSystemEventHandler):
                     teacher = sunday["sub5_teacher"]
                     return sub, teacher
             elif today == "Monday":
-                if sunday["sub1_start"] > now > sunday["sub1_end"]:
-                    sub = sunday["sub1"]
-                    teacher = sunday["sub1_teacher"]
-                elif sunday["sub2_start"] < now < sunday["sub2_end"]:
-                    sub = sunday["sub2"]
-                    teacher = sunday["sub2_teacher"]
+                if monday["sub1_start"] < now < monday["sub1_end"]:
+                    sub = monday["sub1"]
+                    teacher = monday["sub1_teacher"]
+                elif monday["sub2_start"] < now < monday["sub2_end"]:
+                    sub = monday["sub2"]
+                    teacher = monday["sub2_teacher"]
                     return sub, teacher
-                elif sunday["sub3_start"] < now < sunday["sub3_end"]:
-                    sub = sunday["sub3"]
-                    teacher = sunday["sub3_teacher"]
+                elif monday["sub3_start"] < now < monday["sub3_end"]:
+                    sub = monday["sub3"]
+                    teacher = monday["sub3_teacher"]
             elif today == "Tuesday":
-                if sunday["sub1_start"] > now > sunday["sub1_end"]:
+                if tuesday["sub1_start"] < now < tuesday["sub1_end"]:
                     sub = sunday["sub1"]
                     teacher = sunday["sub1_teacher"]
-                elif sunday["sub2_start"] < now < sunday["sub2_end"]:
-                    sub = sunday["sub2"]
-                    teacher = sunday["sub2_teacher"]
+                elif tuesday["sub2_start"] < now < tuesday["sub2_end"]:
+                    sub = tuesday["sub2"]
+                    teacher = tuesday["sub2_teacher"]
                     return sub, teacher
-                elif sunday["sub3_start"] < now < sunday["sub3_end"]:
-                    sub = sunday["sub3"]
-                    teacher = sunday["sub3_teacher"]
-                elif sunday["sub4_start"] < now < sunday["sub4_end"]:
-                    sub = sunday["sub4"]
-                    teacher = sunday["sub4_teacher"]
-                elif sunday["sub5_start"] < now < sunday["sub5_end"]:
-                    sub = sunday["sub5"]
-                    teacher = sunday["sub5_teacher"]
-                elif sunday["sub6_start"] < now < sunday["sub6_end"]:
-                    sub = sunday["sub6"]
-                    teacher = sunday["sub6_teacher"]
+                elif tuesday["sub3_start"] < now < tuesday["sub3_end"]:
+                    sub = tuesday["sub3"]
+                    teacher = tuesday["sub3_teacher"]
+                elif tuesday["sub4_start"] < now < tuesday["sub4_end"]:
+                    sub = tuesday["sub4"]
+                    teacher = tuesday["sub4_teacher"]
+                elif tuesday["sub5_start"] < now < tuesday["sub5_end"]:
+                    sub = tuesday["sub5"]
+                    teacher = tuesday["sub5_teacher"]
+                elif tuesday["sub6_start"] < now < tuesday["sub6_end"]:
+                    sub = tuesday["sub6"]
+                    teacher = tuesday["sub6_teacher"]
             elif today == "Wednesday":
-                if sunday["sub1_start"] > now > sunday["sub1_end"]:
+                if sunday["sub1_start"] < now < sunday["sub1_end"]:
                     sub = sunday["sub1"]
                     teacher = sunday["sub1_teacher"]
                 elif sunday["sub2_start"] < now < sunday["sub2_end"]:
@@ -113,7 +113,7 @@ class MyHandler(FileSystemEventHandler):
                     sub = sunday["sub4"]
                     teacher = sunday["sub4_teacher"]
             elif today == "Thursday":
-                if sunday["sub1_start"] > now > sunday["sub1_end"]:
+                if sunday["sub1_start"] < now < sunday["sub1_end"]:
                     sub = sunday["sub1"]
                     teacher = sunday["sub1_teacher"]
                 elif sunday["sub2_start"] < now < sunday["sub2_end"]:
@@ -127,7 +127,7 @@ class MyHandler(FileSystemEventHandler):
                     sub = sunday["sub4"]
                     teacher = sunday["sub4_teacher"]
             elif today == "Friday":
-                if sunday["sub1_start"] > now > sunday["sub1_end"]:
+                if sunday["sub1_start"] < now < sunday["sub1_end"]:
                     sub = sunday["sub1"]
                     teacher = sunday["sub1_teacher"]
                 elif sunday["sub2_start"] < now < sunday["sub2_end"]:
@@ -148,7 +148,8 @@ class MyHandler(FileSystemEventHandler):
                 os.makedirs(folder_destination + "/" +
                             sub + "/" + teacher + "/" + date)
             else:
-                print("")
+                print(folder_destination + " /" +
+                      sub + "/" + teacher + "/" + date)
             new_destination = folder_destination + "/" + sub + \
                 "/" + teacher + "/" + date + "/" + filename
             os.rename(src, new_destination)
@@ -158,7 +159,7 @@ today = datetime.datetime.now().strftime("%A")
 date = datetime.datetime.today().strftime('%Y-%m-%d')
 print(today, date)
 
-folder_to_track = "/home/prastab/ss"
+folder_to_track = "/home/prastab/Pictures"
 folder_destination = "/home/prastab/notes"
 
 event_handler = MyHandler()
