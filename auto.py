@@ -28,8 +28,9 @@ tuesday = {
 wednesday = {
     "sub1": "English", "sub1_teacher": "", "sub1_start": now.replace(hour=8, minute=0), "sub1_end": now.replace(hour=8, minute=45),
     "sub2": "Maths", "sub2_teacher": "AKC-Mechanics", "sub2_start": now.replace(hour=9, minute=0), "sub2_end": now.replace(hour=9, minute=45),
-    "sub3": "Physics", "sub3_teacher": "SuB", "sub3_start": now.replace(hour=11, minute=15), "sub3_end": now.replace(hour=12, minute=0),
-    "sub4": "Further", "sub4_teacher": "", "sub4_start": now.replace(hour=12, minute=30), "sub4_end": now.replace(hour=13, minute=15), }
+    "sub3": "Chem", "sub3_teacher": "RT", "sub3_start": now.replace(hour=10, minute=15), "sub3_end": now.replace(hour=11, minute=0),
+    "sub4": "Physics", "sub4_teacher": "SuB", "sub4_start": now.replace(hour=11, minute=15), "sub4_end": now.replace(hour=12, minute=0),
+    "sub5": "Further", "sub5_teacher": "", "sub5_start": now.replace(hour=12, minute=30), "sub5_end": now.replace(hour=13, minute=15), }
 thursday = {
     "sub1": "Chem", "sub1_teacher": "DPK", "sub1_start": now.replace(hour=9, minute=0), "sub1_end": now.replace(hour=9, minute=45),
     "sub2": "Maths", "sub2_teacher": "TKL", "sub2_start": now.replace(hour=11, minute=15), "sub2_end": now.replace(hour=12, minute=0),
@@ -50,7 +51,7 @@ class MyHandler(FileSystemEventHandler):
             teacher = ""
             now = datetime.datetime.now()
             if today == "Sunday":
-                if sunday["sub1_start"] > now > sunday["sub1_end"]:
+                if sunday["sub1_start"] < now < sunday["sub1_end"]:
                     sub = sunday["sub1"]
                     teacher = sunday["sub1_teacher"]
                 elif sunday["sub2_start"] < now < sunday["sub2_end"]:
@@ -107,6 +108,9 @@ class MyHandler(FileSystemEventHandler):
                 elif wednesday["sub4_start"] < now < wednesday["sub4_end"]:
                     sub = wednesday["sub4"]
                     teacher = wednesday["sub4_teacher"]
+                elif wednesday["sub5_start"] < now < wednesday["sub5_end"]:
+                    sub = tuesday["sub5"]
+                    teacher = tuesday["sub5_teacher"]
             elif today == "Thursday":
                 if thursday["sub1_start"] < now < thursday["sub1_end"]:
                     sub = thursday["sub1"]
