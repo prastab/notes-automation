@@ -9,38 +9,49 @@ import datetime
 now = datetime.datetime.now()
 today = datetime.datetime.now().strftime("%A")
 sunday = {
-    "sub1": "Physics", "sub1_teacher": "KG", "sub1_start": now.replace(hour=9, minute=0), "sub1_end": now.replace(hour=9, minute=45),
-    "sub2": "Maths", "sub2_teacher": "NVP", "sub2_start": now.replace(hour=10, minute=15), "sub2_end": now.replace(hour=11, minute=0),
-    "sub3": "Chem", "sub3_teacher": "RT", "sub3_start": now.replace(hour=11, minute=15), "sub3_end": now.replace(hour=12, minute=0),
-    "sub4": "Further", "sub4_teacher": "", "sub4_start": now.replace(hour=12, minute=30), "sub4_end": now.replace(hour=13, minute=15),
-    "sub5": "Chem", "sub5_teacher": "ShT", "sub5_start": now.replace(hour=13, minute=30), "sub5_end": now.replace(hour=14, minute=15)}
+    "sub1": "Further", "sub1_teacher": "HSP", "sub1_start": now.replace(hour=8, minute=30), "sub1_end": now.replace(hour=9, minute=10),
+    "sub2": "Maths", "sub2_teacher": "TA", "sub2_start": now.replace(hour=10, minute=40), "sub2_end": now.replace(hour=11, minute=20),
+    "sub3": "Maths", "sub3_teacher": "AKC", "sub3_start": now.replace(hour=11, minute=30), "sub3_end": now.replace(hour=12, minute=10),
+    "sub4": "Further", "sub4_teacher": "GMC", "sub4_start": now.replace(hour=12, minute=40), "sub4_end": now.replace(hour=13, minute=20),
+    "sub5": "Physics", "sub5_teacher": "UA", "sub5_start": now.replace(hour=13, minute=30), "sub5_end": now.replace(hour=14, minute=10),
+    "sub6": "Physics", "sub6_teacher": "HRT", "sub6_start": now.replace(hour=14, minute=20), "sub6_end": now.replace(hour=15, minute=00)}
 monday = {
-    "sub1": "English", "sub1_teacher": "", "sub1_start": now.replace(hour=8, minute=0), "sub1_end": now.replace(hour=8, minute=45),
-    "sub2": "Further", "sub2_teacher": "", "sub2_start": now.replace(hour=9, minute=0), "sub2_end": now.replace(hour=9, minute=45),
-    "sub3": "Chem", "sub3_teacher": "ShT", "sub3_start": now.replace(hour=11, minute=15), "sub3_end": now.replace(hour=12, minute=0)}
+    "sub1": "Physics", "sub1_teacher": "VA", "sub1_start": now.replace(hour=8, minute=30), "sub1_end": now.replace(hour=9, minute=10),
+    "sub2": "Maths", "sub2_teacher": "TA", "sub2_start": now.replace(hour=9, minute=20), "sub2_end": now.replace(hour=10, minute=00),
+    "sub3": "Chemistry", "sub3_teacher": "RT", "sub3_start": now.replace(hour=10, minute=40), "sub3_end": now.replace(hour=11, minute=20),
+    "sub4": "Chemistry", "sub4_teacher": "ShT", "sub4_start": now.replace(hour=11, minute=30), "sub4_end": now.replace(hour=12, minute=10),
+    "sub5": "Further", "sub5_teacher": "LBR", "sub5_start": now.replace(hour=12, minute=40), "sub5_end": now.replace(hour=13, minute=20),
+    "sub6": "Further", "sub5_teacher": "HSP", "sub6_start": now.replace(hour=13, minute=30), "sub6_end": now.replace(hour=14, minute=10)}
+                                                          
 tuesday = {
-    "sub1": "Physics", "sub1_teacher": "DPK-Not sure", "sub1_start": now.replace(hour=8, minute=0), "sub1_end": now.replace(hour=8, minute=45),
-    "sub2": "Chem", "sub2_teacher": "RT", "sub2_start": now.replace(hour=9, minute=0), "sub2_end": now.replace(hour=9, minute=45),
-    "sub3": "Chem", "sub3_teacher": "UVK", "sub3_start": now.replace(hour=10, minute=15), "sub3_end": now.replace(hour=11, minute=0),
-    "sub4": "Maths", "sub4_teacher": "TKL", "sub4_start": now.replace(hour=11, minute=15), "sub4_end": now.replace(hour=12, minute=0),
-    "sub5": "Physics", "sub5_teacher": "HRT", "sub5_start": now.replace(hour=12, minute=30), "sub5_end": now.replace(hour=13, minute=15),
-    "sub6": "Further", "sub6_teacher": "", "sub6_start": now.replace(hour=13, minute=30), "sub6_end": now.replace(hour=14, minute=15)}
+    "sub1": "Chemistry", "sub1_teacher": "UVK", "sub1_start": now.replace(hour=8, minute=30), "sub1_end": now.replace(hour=9, minute=10),
+    "sub2": "Chemistry", "sub2_teacher": "MKJ", "sub2_start": now.replace(hour=9, minute=20), "sub2_end": now.replace(hour=10, minute=00),
+    "sub3": "Maths", "sub3_teacher": "TKL", "sub3_start": now.replace(hour=10, minute=40), "sub3_end": now.replace(hour=11, minute=20),
+    "sub4": "Maths", "sub4_teacher": "AKC", "sub4_start": now.replace(hour=11, minute=30), "sub4_end": now.replace(hour=12, minute=10),
+    "sub5": "Further", "sub5_teacher": "GMC", "sub5_start": now.replace(hour=12, minute=40), "sub5_end": now.replace(hour=13, minute=20),
+    "sub6": "English", "sub6_teacher": "GDJ", "sub6_start": now.replace(hour=13, minute=30), "sub6_end": now.replace(hour=14, minute=10),
+    "sub7": "English", "sub7_teacher": "CD", "sub7_start": now.replace(hour=14, minute=20), "sub7_end": now.replace(hour=15, minute=00)}
 wednesday = {
-    "sub1": "English", "sub1_teacher": "", "sub1_start": now.replace(hour=8, minute=0), "sub1_end": now.replace(hour=8, minute=45),
-    "sub2": "Maths", "sub2_teacher": "AKC-Mechanics", "sub2_start": now.replace(hour=9, minute=0), "sub2_end": now.replace(hour=9, minute=45),
-    "sub3": "Chem", "sub3_teacher": "RT", "sub3_start": now.replace(hour=10, minute=15), "sub3_end": now.replace(hour=11, minute=0),
-    "sub4": "Physics", "sub4_teacher": "SuB", "sub4_start": now.replace(hour=11, minute=15), "sub4_end": now.replace(hour=12, minute=0),
-    "sub5": "Further", "sub5_teacher": "", "sub5_start": now.replace(hour=12, minute=30), "sub5_end": now.replace(hour=13, minute=15), }
+    "sub1": "Physics", "sub1_teacher": "HRT", "sub1_start": now.replace(hour=8, minute=30), "sub1_end": now.replace(hour=9, minute=10),
+    "sub2": "Physics", "sub2_teacher": "VA", "sub2_start": now.replace(hour=9, minute=20), "sub2_end": now.replace(hour=10, minute=00),
+    "sub3": "Maths", "sub3_teacher": "TA", "sub3_start": now.replace(hour=10, minute=40), "sub3_end": now.replace(hour=11, minute=20),
+    "sub4": "Physics", "sub4_teacher": "UA", "sub4_start": now.replace(hour=11, minute=30), "sub4_end": now.replace(hour=12, minute=10),
+    "sub5": "Further", "sub5_teacher": "HSP", "sub5_start": now.replace(hour=12, minute=40), "sub5_end": now.replace(hour=13, minute=20)}
 thursday = {
-    "sub1": "Chem", "sub1_teacher": "DPK", "sub1_start": now.replace(hour=9, minute=0), "sub1_end": now.replace(hour=9, minute=45),
-    "sub2": "Maths", "sub2_teacher": "TKL", "sub2_start": now.replace(hour=11, minute=15), "sub2_end": now.replace(hour=12, minute=0),
-    "sub3": "Physics", "sub3_teacher": "KG", "sub3_start":  now.replace(hour=12, minute=30), "sub3_end": now.replace(hour=13, minute=15),
-    "sub4": "Maths", "sub4_teacher": "NVP", "sub4_start": now.replace(hour=13, minute=30), "sub4_end": now.replace(hour=14, minute=15), }
+    "sub1": "English", "sub1_teacher": "GDJ", "sub1_start": now.replace(hour=8, minute=30), "sub1_end": now.replace(hour=9, minute=10),
+    "sub2": "English", "sub2_teacher": "CD", "sub2_start": now.replace(hour=9, minute=20), "sub2_end": now.replace(hour=10, minute=00),
+    "sub3": "Maths", "sub3_teacher": "TA", "sub3_start": now.replace(hour=10, minute=40), "sub3_end": now.replace(hour=11, minute=20),
+    "sub4": "Chemistry", "sub4_teacher": "UA", "sub4_start": now.replace(hour=11, minute=30), "sub4_end": now.replace(hour=12, minute=10),
+    "sub5": "Chemistry", "sub5_teacher": "HSP", "sub5_start": now.replace(hour=12, minute=40), "sub5_end": now.replace(hour=13, minute=20),
+    "sub6": "Further", "sub6_teacher": "LBR", "sub6_start": now.replace(hour=14, minute=20), "sub6_end": now.replace(hour=15, minute=00)}
 friday = {
-    "sub1": "Physics", "sub1_teacher": "HRT", "sub1_start": now.replace(hour=8, minute=0), "sub1_end": now.replace(hour=8, minute=45),
-    "sub2": "Further", "sub2_teacher": "", "sub2_start": now.replace(hour=10, minute=15), "sub2_end": now.replace(hour=11, minute=0),
-    "sub3": "English", "sub3_teacher": "", "sub3_start": now.replace(hour=12, minute=30), "sub3_end": now.replace(hour=13, minute=15),
-    "sub4": "Chem", "sub4_teacher": "RT", "sub4_start": now.replace(hour=13, minute=30), "sub4_end": now.replace(hour=14, minute=15), }
+    "sub1": "Physics", "sub1_teacher": "UA", "sub1_start": now.replace(hour=8, minute=30), "sub1_end": now.replace(hour=9, minute=10),
+    "sub2": "Physics", "sub2_teacher": "HRT", "sub2_start": now.replace(hour=9, minute=20), "sub2_end": now.replace(hour=10, minute=00),
+    "sub3": "Chemistry", "sub3_teacher": "ShT", "sub3_start": now.replace(hour=10, minute=40), "sub3_end": now.replace(hour=11, minute=20),
+    "sub4": "Chemistry", "sub4_teacher": "RT", "sub4_start": now.replace(hour=11, minute=30), "sub4_end": now.replace(hour=12, minute=10),
+    "sub5": "Further", "sub5_teacher": "LBR", "sub5_start": now.replace(hour=12, minute=40), "sub5_end": now.replace(hour=13, minute=20),
+    "sub6": "Further", "sub6_teacher": "HSP", "sub6_start": now.replace(hour=13, minute=30), "sub6_end": now.replace(hour=14, minute=10)}
+friday = {
 
 
 class MyHandler(FileSystemEventHandler):
@@ -66,6 +77,10 @@ class MyHandler(FileSystemEventHandler):
                 elif sunday["sub5_start"] < now < sunday["sub5_end"]:
                     sub = sunday["sub5"]
                     teacher = sunday["sub5_teacher"]
+                elif sunday["sub6_start"] < now < sunday["sub6_end"]:
+                    sub = sunday["sub6"]
+                    teacher = sunday["su6_teacher"]
+            
             elif today == "Monday":
                 if monday["sub1_start"] < now < monday["sub1_end"]:
                     sub = monday["sub1"]
@@ -75,7 +90,17 @@ class MyHandler(FileSystemEventHandler):
                     teacher = monday["sub2_teacher"]
                 elif monday["sub3_start"] < now < monday["sub3_end"]:
                     sub = monday["sub3"]
-                    teacher = monday["sub3_teacher"]
+                    teacher = monday["sub3_teacher"]      
+                elif monday["sub4_start"] < now < monday["sub4_end"]:
+                    sub = monday["sub4"]
+                    teacher = monday["sub4_teacher"]
+                elif monday["sub5_start"] < now < monday["sub5_end"]:
+                    sub = monday["sub5"]
+                    teacher = monday["sub5_teacher"]    
+                elif monday["sub6_start"] < now < monday["sub6_end"]:
+                    sub = monday["sub6"]
+                    teacher = monday["su6_teacher"]
+
             elif today == "Tuesday":
                 if tuesday["sub1_start"] < now < tuesday["sub1_end"]:
                     sub = tuesday["sub1"]
@@ -95,6 +120,11 @@ class MyHandler(FileSystemEventHandler):
                 elif tuesday["sub6_start"] < now < tuesday["sub6_end"]:
                     sub = tuesday["sub6"]
                     teacher = tuesday["sub6_teacher"]
+                elif tuesday["sub7_start"] < now < tuesday["sub7_end"]:
+                    sub = tuesday["sub7"]
+                    teacher = tuesday["sub7_teacher"]
+    
+    
             elif today == "Wednesday":
                 if wednesday["sub1_start"] < now < wednesday["sub1_end"]:
                     sub = wednesday["sub1"]
@@ -111,6 +141,8 @@ class MyHandler(FileSystemEventHandler):
                 elif wednesday["sub5_start"] < now < wednesday["sub5_end"]:
                     sub = tuesday["sub5"]
                     teacher = tuesday["sub5_teacher"]
+    
+    
             elif today == "Thursday":
                 if thursday["sub1_start"] < now < thursday["sub1_end"]:
                     sub = thursday["sub1"]
@@ -124,6 +156,14 @@ class MyHandler(FileSystemEventHandler):
                 elif thursday["sub4_start"] < now < thursday["sub4_end"]:
                     sub = thursday["sub4"]
                     teacher = thursday["sub4_teacher"]
+                elif thursday["sub5_start"] < now < thursday["sub5_end"]:
+                    sub = thursday["sub5"]
+                    teacher = thursday["sub5_teacher"]
+                elif thursday["sub6_start"] < now < thursday["sub6_end"]:
+                    sub = thursday["sub6"]
+                    teacher = thursday["sub6_teacher"]
+    
+    
             elif today == "Friday":
                 if friday["sub1_start"] < now < friday["sub1_end"]:
                     sub = friday["sub1"]
@@ -137,6 +177,12 @@ class MyHandler(FileSystemEventHandler):
                 elif friday["sub4_start"] < now < friday["sub4_end"]:
                     sub = friday["sub4"]
                     teacher = friday["sub4_teacher"]
+                elif friday["sub5_start"] < now < friday["sub5_end"]:
+                    sub = friday["sub5"]
+                    teacher = friday["sub5_teacher"]
+                elif friday["sub6_start"] < now < friday["sub6_end"]:
+                    sub = friday["sub6"]
+                    teacher = friday["sub6_teacher"]
             else:
                 sub = "Screenshots"
                 return sub, teacher
