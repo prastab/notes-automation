@@ -9,48 +9,48 @@ import datetime
 now = datetime.datetime.now()
 today = datetime.datetime.now().strftime("%A")
 sunday = {
-    "sub1": "Further", "sub1_teacher": "HSP", "sub1_start": now.replace(hour=8, minute=30), "sub1_end": now.replace(hour=9, minute=10),
-    "sub2": "Maths", "sub2_teacher": "TA", "sub2_start": now.replace(hour=10, minute=40), "sub2_end": now.replace(hour=11, minute=20),
-    "sub3": "Maths", "sub3_teacher": "AKC", "sub3_start": now.replace(hour=11, minute=30), "sub3_end": now.replace(hour=12, minute=10),
-    "sub4": "Further", "sub4_teacher": "GMC", "sub4_start": now.replace(hour=12, minute=40), "sub4_end": now.replace(hour=13, minute=20),
-    "sub5": "Physics", "sub5_teacher": "UA", "sub5_start": now.replace(hour=13, minute=30), "sub5_end": now.replace(hour=14, minute=10),
-    "sub6": "Physics", "sub6_teacher": "HRT", "sub6_start": now.replace(hour=14, minute=20), "sub6_end": now.replace(hour=15, minute=00)}
+    "sub1": "Biology", "sub1_teacher": "BR", "sub1_start": now.replace(hour=8, minute=30), "sub1_end": now.replace(hour=9, minute=10),
+    "sub2": "Biology", "sub2_teacher": "ST", "sub2_start": now.replace(hour=9, minute=20), "sub2_end": now.replace(hour=10, minute=00),
+    "sub3": "Maths", "sub3_teacher": "AKC", "sub3_start": now.replace(hour=10, minute=40), "sub3_end": now.replace(hour=11, minute=20),
+    "sub4": "Maths", "sub4_teacher": "TKL", "sub4_start": now.replace(hour=11, minute=30), "sub4_end": now.replace(hour=12, minute=10),
+    "sub5": "Physics", "sub5_teacher": "HRT", "sub5_start": now.replace(hour=13, minute=30), "sub5_end": now.replace(hour=14, minute=10),
+    "sub6": "Physics", "sub6_teacher": "UA", "sub6_start": now.replace(hour=14, minute=20), "sub6_end": now.replace(hour=15, minute=00)}
 monday = {
-    "sub1": "Physics", "sub1_teacher": "VA", "sub1_start": now.replace(hour=8, minute=30), "sub1_end": now.replace(hour=9, minute=10),
-    "sub2": "Maths", "sub2_teacher": "TA", "sub2_start": now.replace(hour=9, minute=20), "sub2_end": now.replace(hour=10, minute=00),
-    "sub3": "Chemistry", "sub3_teacher": "RT", "sub3_start": now.replace(hour=10, minute=40), "sub3_end": now.replace(hour=11, minute=20),
-    "sub4": "Chemistry", "sub4_teacher": "ShT", "sub4_start": now.replace(hour=11, minute=30), "sub4_end": now.replace(hour=12, minute=10),
-    "sub5": "Further", "sub5_teacher": "LBR", "sub5_start": now.replace(hour=12, minute=40), "sub5_end": now.replace(hour=13, minute=20),
-    "sub6": "Further", "sub5_teacher": "HSP", "sub6_start": now.replace(hour=13, minute=30), "sub6_end": now.replace(hour=14, minute=10)}
-                                                          
-tuesday = {
-    "sub1": "Chemistry", "sub1_teacher": "UVK", "sub1_start": now.replace(hour=8, minute=30), "sub1_end": now.replace(hour=9, minute=10),
-    "sub2": "Chemistry", "sub2_teacher": "MKJ", "sub2_start": now.replace(hour=9, minute=20), "sub2_end": now.replace(hour=10, minute=00),
-    "sub3": "Maths", "sub3_teacher": "TKL", "sub3_start": now.replace(hour=10, minute=40), "sub3_end": now.replace(hour=11, minute=20),
-    "sub4": "Maths", "sub4_teacher": "AKC", "sub4_start": now.replace(hour=11, minute=30), "sub4_end": now.replace(hour=12, minute=10),
-    "sub5": "Further", "sub5_teacher": "GMC", "sub5_start": now.replace(hour=12, minute=40), "sub5_end": now.replace(hour=13, minute=20),
-    "sub6": "English", "sub6_teacher": "GDJ", "sub6_start": now.replace(hour=13, minute=30), "sub6_end": now.replace(hour=14, minute=10),
-    "sub7": "English", "sub7_teacher": "CD", "sub7_start": now.replace(hour=14, minute=20), "sub7_end": now.replace(hour=15, minute=00)}
-wednesday = {
-    "sub1": "Physics", "sub1_teacher": "HRT", "sub1_start": now.replace(hour=8, minute=30), "sub1_end": now.replace(hour=9, minute=10),
+    "sub1": "Maths", "sub1_teacher": "TKL", "sub1_start": now.replace(hour=8, minute=30), "sub1_end": now.replace(hour=9, minute=10),
     "sub2": "Physics", "sub2_teacher": "VA", "sub2_start": now.replace(hour=9, minute=20), "sub2_end": now.replace(hour=10, minute=00),
-    "sub3": "Maths", "sub3_teacher": "TA", "sub3_start": now.replace(hour=10, minute=40), "sub3_end": now.replace(hour=11, minute=20),
-    "sub4": "Physics", "sub4_teacher": "UA", "sub4_start": now.replace(hour=11, minute=30), "sub4_end": now.replace(hour=12, minute=10),
-    "sub5": "Further", "sub5_teacher": "HSP", "sub5_start": now.replace(hour=12, minute=40), "sub5_end": now.replace(hour=13, minute=20)}
-thursday = {
-    "sub1": "English", "sub1_teacher": "GDJ", "sub1_start": now.replace(hour=8, minute=30), "sub1_end": now.replace(hour=9, minute=10),
-    "sub2": "English", "sub2_teacher": "CD", "sub2_start": now.replace(hour=9, minute=20), "sub2_end": now.replace(hour=10, minute=00),
-    "sub3": "Maths", "sub3_teacher": "TA", "sub3_start": now.replace(hour=10, minute=40), "sub3_end": now.replace(hour=11, minute=20),
-    "sub4": "Chemistry", "sub4_teacher": "UA", "sub4_start": now.replace(hour=11, minute=30), "sub4_end": now.replace(hour=12, minute=10),
-    "sub5": "Chemistry", "sub5_teacher": "HSP", "sub5_start": now.replace(hour=12, minute=40), "sub5_end": now.replace(hour=13, minute=20),
-    "sub6": "Further", "sub6_teacher": "LBR", "sub6_start": now.replace(hour=14, minute=20), "sub6_end": now.replace(hour=15, minute=00)}
-friday = {
-    "sub1": "Physics", "sub1_teacher": "UA", "sub1_start": now.replace(hour=8, minute=30), "sub1_end": now.replace(hour=9, minute=10),
-    "sub2": "Physics", "sub2_teacher": "HRT", "sub2_start": now.replace(hour=9, minute=20), "sub2_end": now.replace(hour=10, minute=00),
     "sub3": "Chemistry", "sub3_teacher": "ShT", "sub3_start": now.replace(hour=10, minute=40), "sub3_end": now.replace(hour=11, minute=20),
     "sub4": "Chemistry", "sub4_teacher": "RT", "sub4_start": now.replace(hour=11, minute=30), "sub4_end": now.replace(hour=12, minute=10),
-    "sub5": "Further", "sub5_teacher": "LBR", "sub5_start": now.replace(hour=12, minute=40), "sub5_end": now.replace(hour=13, minute=20),
-    "sub6": "Further", "sub6_teacher": "HSP", "sub6_start": now.replace(hour=13, minute=30), "sub6_end": now.replace(hour=14, minute=10)}
+    "sub5": "Biology", "sub5_teacher": "PL", "sub5_start": now.replace(hour=12, minute=40), "sub5_end": now.replace(hour=13, minute=20),
+    "sub6": "Biology", "sub6_teacher": "STB", "sub6_start": now.replace(hour=13, minute=30), "sub6_end": now.replace(hour=14, minute=10)}
+                                                          
+tuesday = {
+    "sub1": "Chemistry", "sub1_teacher": "MJK", "sub1_start": now.replace(hour=8, minute=30), "sub1_end": now.replace(hour=9, minute=10),
+    "sub2": "Chemistry", "sub2_teacher": "UVK", "sub2_start": now.replace(hour=9, minute=20), "sub2_end": now.replace(hour=10, minute=00),
+    "sub3": "Maths", "sub3_teacher": "AKC", "sub3_start": now.replace(hour=10, minute=40), "sub3_end": now.replace(hour=11, minute=20),
+    "sub4": "Maths", "sub4_teacher": "TKL", "sub4_start": now.replace(hour=11, minute=30), "sub4_end": now.replace(hour=12, minute=10),
+    "sub5": "Biology", "sub5_teacher": "ST", "sub5_start": now.replace(hour=12, minute=40), "sub5_end": now.replace(hour=13, minute=20),
+    "sub6": "English", "sub6_teacher": "CD", "sub6_start": now.replace(hour=13, minute=30), "sub6_end": now.replace(hour=14, minute=10),
+    "sub7": "English", "sub7_teacher": "GDJ", "sub7_start": now.replace(hour=14, minute=20), "sub7_end": now.replace(hour=15, minute=00)}
+wednesday = {
+    "sub1": "Physics", "sub1_teacher": "VA", "sub1_start": now.replace(hour=8, minute=30), "sub1_end": now.replace(hour=9, minute=10),
+    "sub2": "Physics", "sub2_teacher": "HRT", "sub2_start": now.replace(hour=9, minute=20), "sub2_end": now.replace(hour=10, minute=00),
+    "sub3": "Physics", "sub3_teacher": "UA", "sub3_start": now.replace(hour=10, minute=40), "sub3_end": now.replace(hour=11, minute=20),
+    "sub4": "Physics", "sub4_teacher": "TKL", "sub4_start": now.replace(hour=11, minute=30), "sub4_end": now.replace(hour=12, minute=10),
+    "sub5": "Biology", "sub5_teacher": "PL", "sub5_start": now.replace(hour=13, minute=30), "sub5_end": now.replace(hour=14, minute=10)}
+thursday = {
+    "sub1": "English", "sub1_teacher": "CD", "sub1_start": now.replace(hour=8, minute=30), "sub1_end": now.replace(hour=9, minute=10),
+    "sub2": "English", "sub2_teacher": "GDJ", "sub2_start": now.replace(hour=9, minute=20), "sub2_end": now.replace(hour=10, minute=00),
+    "sub3": "Chemistry", "sub3_teacher": "MJK", "sub3_start": now.replace(hour=10, minute=40), "sub3_end": now.replace(hour=11, minute=20),
+    "sub4": "Maths", "sub4_teacher": "GMC", "sub4_start": now.replace(hour=11, minute=30), "sub4_end": now.replace(hour=12, minute=10),
+    "sub5": "Chemistry", "sub5_teacher": "UVK", "sub5_start": now.replace(hour=13, minute=30), "sub5_end": now.replace(hour=14, minute=10),
+    "sub6": "Biology", "sub6_teacher": "BR", "sub6_start": now.replace(hour=14, minute=20), "sub6_end": now.replace(hour=15, minute=00)}
+friday = {
+    "sub1": "Physics", "sub1_teacher": "HRT", "sub1_start": now.replace(hour=8, minute=30), "sub1_end": now.replace(hour=9, minute=10),
+    "sub2": "Physics", "sub2_teacher": "UA", "sub2_start": now.replace(hour=9, minute=20), "sub2_end": now.replace(hour=10, minute=00),
+    "sub3": "Chemistry", "sub3_teacher": "RT", "sub3_start": now.replace(hour=10, minute=40), "sub3_end": now.replace(hour=11, minute=20),
+    "sub4": "Chemistry", "sub4_teacher": "ST", "sub4_start": now.replace(hour=11, minute=30), "sub4_end": now.replace(hour=12, minute=10),
+    "sub5": "Further", "sub5_teacher": "STB", "sub5_start": now.replace(hour=12, minute=40), "sub5_end": now.replace(hour=13, minute=20),
+    }
 friday = {
 
 
@@ -202,8 +202,8 @@ today = datetime.datetime.now().strftime("%A")
 date = datetime.datetime.today().strftime('%Y-%m-%d')
 print(today, date)
 
-folder_to_track = "/home/prastab/Pictures"
-folder_destination = "/home/prastab/notes"
+folder_to_track = "/home/NPaudel/Pictures/Screenshots"
+folder_destination = "/home/Npaudel/notes"
 
 event_handler = MyHandler()
 observer = Observer()
